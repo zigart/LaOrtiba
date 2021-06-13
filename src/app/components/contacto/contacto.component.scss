@@ -1,0 +1,57 @@
+
+#contacto{
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+
+    .backgroundContacto {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        z-index: -1;
+        h4{
+            font-size: 70px;
+            color: #fff3dc;
+        }
+      }
+      .backgroundContacto::before {
+        content: "";
+        position: absolute;
+        top: -175px; left: 0;
+        width: 100%; 
+        height: 100%;
+        background-image: url('../../../assets/images/QuienesSomos.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: brightness(65%) blur(2px);
+      }
+      .moduleContacto {
+        position: relative;
+      }
+
+      .info{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 200px;
+        border-top: 4px double wheat;
+        border-bottom: 4px double wheat;
+        background-color: #3a090a;
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            span {
+              margin-left: 10px;
+            }
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+        }
+}

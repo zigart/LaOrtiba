@@ -1,0 +1,85 @@
+
+#integrantes{
+    min-height: 100vh;
+    width: 100%;
+
+    .backgroundIntegrantes {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        z-index: -1;
+        h2{
+            font-size: 70px;
+            color: #fff3dc;
+        }
+      }
+      .backgroundIntegrantes::before {
+        content: "";
+        position: absolute;
+        top: -175px; left: 0;
+        width: 100%; 
+        height: 100%;
+        background-image: url('../../../assets/images/integrantes.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: brightness(65%) blur(2px);
+        
+      }
+      .moduleIntegrantes {
+        position: relative;
+      }
+
+      .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 180px;
+        padding: 30px;
+        font-size: 25px;
+        text-align: center;
+        line-height: 25px;
+        color: wheat;
+        background-color: #3a090a;
+        border-top: 4px double wheat;
+        border-bottom: 4px double wheat;
+        .carousel{
+            width: 90%;
+            height: 100%;
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                overflow: hidden;
+                padding: 20px;
+                margin: 0;
+                width: 85%;
+                min-height: 620px;
+                background-color: wheat;
+                img {
+                  height: 200px;
+                  width: 200px;
+                  margin: 40px 0;
+                  border-radius: 100%;
+                }
+                .nombre {
+                  text-align: center;
+                  font-size: 30px;
+                  font-weight: 800;
+                  color: #000;
+                }
+                .descripcion {
+                  text-align: center;
+                  font-family: "Cairo", sans-serif;
+                  font-size: 15px;
+                  color: #000;
+                }
+                box-shadow: 0 0 15px inset #3a090a;
+            }
+        }
+        }
+}

@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+//global
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: rgb(36, 36, 36);
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 22px;
+      background-color: wheat;
+      border: 1px solid black;
+    }
+    &::-webkit-scrollbar-corner {
+      border-radius: 22px;
+    }
+  }
+
+  body{
+    scroll-behavior: smooth
+  }
