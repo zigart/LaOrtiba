@@ -1,9 +1,18 @@
 <nav class="navegation">
-    <ul>
+    <img src="../../../assets/images/menu.svg" (click)="movileMenu()" alt="menu">
+    <p id="logo">La ortiba</p>
+    <ul class="desktopMenu">
         <li (click)="toQuienesSomos()">¿QUIENES SOMOS?</li>
         <li (click)="toIntegrantes()">INTEGRANTES</li>
         <li (click)="toShows()">SHOWS</li>
         <li (click)="toContacto()">CONTACTO</li>
-    
     </ul>
+
+    <ul class="movileMenu" id="movileMenu" style="display: none;">
+        <li (click)="toQuienesSomosMovile()">¿QUIENES SOMOS?</li>
+        <li (click)="toIntegrantesMovile()">INTEGRANTES</li>
+        <li (click)="toShowsMovile()">SHOWS</li>
+        <li (click)="toContactoMovile()">CONTACTO</li>
+    </ul>
+
 </nav>

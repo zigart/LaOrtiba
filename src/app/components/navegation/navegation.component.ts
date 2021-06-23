@@ -24,4 +24,33 @@ export class NavegationComponent implements OnInit {
   toContacto(){
     document.getElementById("contacto")?.scrollIntoView({behavior:"smooth"});
   }
+
+  movileMenu(){
+    let movileMenu = document.getElementById("movileMenu");
+    if(movileMenu?.getAttribute("style") == "display: none;"){
+      movileMenu?.setAttribute("class", "movileMenu showing");
+      setTimeout(()=>{movileMenu?.setAttribute("style", "display: block;");},10);
+      
+    }else{
+      movileMenu?.setAttribute("class", "movileMenu hidden");
+      setTimeout(()=>{movileMenu?.setAttribute("style", "display: none;");},300);
+    }
+  }
+
+  toQuienesSomosMovile(){
+    document.getElementById("quienesSomos")?.scrollIntoView({behavior:"smooth"});
+    this.movileMenu();
+  }
+  toIntegrantesMovile(){
+    document.getElementById("integrantes")?.scrollIntoView({behavior:"smooth"});
+    this.movileMenu();
+  }
+  toShowsMovile(){
+    document.getElementById("shows")?.scrollIntoView({behavior:"smooth"});
+    this.movileMenu();
+  }
+  toContactoMovile(){
+    document.getElementById("contacto")?.scrollIntoView({behavior:"smooth"});
+    this.movileMenu();
+  }
 }

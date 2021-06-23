@@ -52,7 +52,7 @@
             .card {
                 display: flex;
                 flex-direction: column;
-                justify-content: start;
+                justify-content: flex-start;
                 align-items: center;
                 overflow: hidden;
                 padding: 20px;
@@ -82,4 +82,18 @@
             }
         }
         }
+}
+
+
+@media(max-width: 720px) {
+  
+  #integrantes{
+
+    .backgroundIntegrantes {
+        h2{
+            font-size: 40px;
+            color: #fff3dc;
+        }
+      }
+}
 }

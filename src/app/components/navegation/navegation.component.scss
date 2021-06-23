@@ -9,7 +9,13 @@
     width: 100%;
     height: 40px;
     background-color: #b7a735;
-    ul{
+    img{
+        display: none;
+    }
+    #logo{
+        display: none;
+    }
+    .desktopMenu{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -23,3 +29,69 @@
         }
     }
 }
+
+
+@media(max-width: 720px) {
+    .navegation{
+        position: sticky;
+        top:  0;
+        z-index: 99;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100%;
+        grid-template-areas: "menu logo";
+        width: 100%;
+        height: 40px;
+        background-color: #b7a735;
+        img{
+            display: flex;
+            grid-area: menu;
+            justify-self: start;
+            margin-left: 10px;
+        }
+        #logo{
+            display: block;
+            grid-area: logo;
+            justify-self: center;
+        }
+        .desktopMenu{
+            display: none;
+        }
+        @keyframes slide-down {
+            0%{ height: 0%;}
+            100%{ height: 100vh;}
+        }
+
+
+        @keyframes slide-up{
+            0%{height: 95vh;}
+            100%{height: 0;}
+        }
+        .showing{
+            animation: slide-down 300ms linear;
+        }
+        .hidden{
+             animation: slide-up 300ms linear;
+        }
+        .movileMenu{
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            background-color:wheat;
+            height: 95vh;
+            overflow: hidden;
+
+            li{
+                list-style: none;
+                font-weight: bold;
+                font-size: 20px;
+                cursor: pointer;
+                color: white;
+                margin: 20px 0 20px 0px;
+                padding: 20px;
+                border-bottom: 2px solid black;
+            }
+        }
+    }
+  }
+
